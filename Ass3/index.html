@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Puzzle Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Dynamic Image Puzzle Game</h1>
+    <div class="controls">
+        <div class="status">
+            <label>Moves: <span id="moveCount">0</span></label>
+            <label> | Time: <span id="timeElapsed">0</span> seconds</label>
+        </div>
+        <div class="control-row">
+            <button id="startBtn">Start Puzzle</button>
+            <input type="file" id="imageUpload" accept="image/*" />
+        </div>
+    </div>
+    <div id="puzzleContainer" class="puzzle-grid"></div>
+    <script src="script.js"></script>
+</body>
+</html>
