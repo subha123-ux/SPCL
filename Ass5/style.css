@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e2f;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover{
+    color: #6186f6;
+}
+
+.nav-links li a::after{
+    content: ' ';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background-color: #acfb7b;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover::after{
+    width: 100%;
+}
+
+.hamburger{
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span{
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1){
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3){
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.search-bar{
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    width: 230px;
+}
+
+footer{
+    background-color: #1e1e2f;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 620px;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.footer p{
+    margin: 0;
+    color: #ccc;
+}
+
+.footer p span{
+    color: #00bcd4;
+    font-weight: bold;
+}
+
+@media screen and (max-width:468px){
+    .nav-links{
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #1e1e2f;
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    .nav-links.active{
+        display: flex;
+    }
+
+    .hamburger{
+        display: flex;
+    }
+}
