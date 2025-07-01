@@ -61,6 +61,16 @@ body{
     width: 100%;
 }
 
+@keyframes blink{
+    0% {opacity: 1;}
+    50% {opacity: 0.2;}
+    100%{opacity: 1;}
+}
+
+.nav-links li a:active{
+    animation: blink 0.3s ease;
+}
+
 .hamburger{
     display: none;
     flex-direction: column;
